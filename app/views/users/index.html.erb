@@ -6,6 +6,9 @@
   <ul class="dropdown-menu">
     <% @users.each do |user| %>
         <li><a href="<%= "/users/#{user.id}" %>"><%= user.name %></a></li>
+        <%= link_to users_index_path(user) do  %>  #faz a mesma cosia do de cima 
+          <%= user.name %>
+        <% end %>
     <% end %>
   </ul>
 </div>
