@@ -1,0 +1,12 @@
+<h1 class="navbar navbar-expand-lg bg-body-tertiary">Users</h1>
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Usuários
+  </button>
+  <ul class="dropdown-menu">
+    <% @users.each do |user| %>
+        <li><a href="<%= "/users/#{user.id}" %>"><%= user.name %></a></li>
+    <% end %>
+  </ul>
+</div>
+
